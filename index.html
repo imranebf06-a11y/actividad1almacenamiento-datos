@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio educativo sobre tipos de almacenamiento de datos">
+  <title>Tipos de Almacenamiento de Datos</title>
+  <!-- Tailwind CSS vía CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="bg-blue-600 text-white p-6">
+    <h1 class="text-3xl font-bold text-center">Tipos de Almacenamiento de Datos</h1>
+    <p class="text-center">Sitio educativo con ejemplos y actividades</p>
+  </header>
+
+  <!-- Sección: Filtro -->
+  <section class="p-6">
+    <h2 class="text-2xl font-semibold mb-4">Filtro por categoría</h2>
+    <div class="flex flex-wrap gap-2">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Primario</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Secundario</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Bases de datos</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Nube</button>
+    </div>
+  </section>
+
+  <!-- Sección: Tarjetas -->
+  <section class="p-6 bg-white">
+    <h2 class="text-2xl font-semibold mb-4">Tipos principales</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="bg-gray-100 rounded-xl p-4 shadow">
+        <h3 class="font-bold mb-2">Almacenamiento Primario</h3>
+        <p>Memoria RAM, Caché y registros de CPU. Muy rápido, pero volátil.</p>
+      </div>
+      <div class="bg-gray-100 rounded-xl p-4 shadow">
+        <h3 class="font-bold mb-2">Almacenamiento Secundario</h3>
+        <p>Discos duros, SSD, cintas. Más lento pero persistente.</p>
+      </div>
+      <div class="bg-gray-100 rounded-xl p-4 shadow">
+        <h3 class="font-bold mb-2">Bases de Datos</h3>
+        <p>Sistemas organizados para almacenar y consultar datos estructurados.</p>
+      </div>
+      <div class="bg-gray-100 rounded-xl p-4 shadow">
+        <h3 class="font-bold mb-2">Almacenamiento en la Nube</h3>
+        <p>Servicios externos que guardan datos en Internet con escalabilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Tabla comparativa -->
+  <section class="p-6">
+    <h2 class="text-2xl font-semibold mb-4">Tabla comparativa</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-blue-500 text-white">
+            <th class="p-2">Tipo</th>
+            <th class="p-2">Velocidad</th>
+            <th class="p-2">Persistencia</th>
+            <th class="p-2">Costo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="p-2">Primario</td>
+            <td class="p-2">Muy alta</td>
+            <td class="p-2">Volátil</td>
+            <td class="p-2">Alto</td>
+          </tr>
+          <tr class="border-b bg-gray-100">
+            <td class="p-2">Secundario</td>
+            <td class="p-2">Media</td>
+            <td class="p-2">Persistente</td>
+            <td class="p-2">Medio</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2">Bases de Datos</td>
+            <td class="p-2">Depende del servidor</td>
+            <td class="p-2">Persistente</td>
+            <td class="p-2">Variable</td>
+          </tr>
+          <tr class="border-b bg-gray-100">
+            <td class="p-2">Nube</td>
+            <td class="p-2">Variable (depende del plan)</td>
+            <td class="p-2">Persistente</td>
+            <td class="p-2">Suscripción</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Sección: Glosario -->
+  <section class="p-6 bg-white">
+    <h2 class="text-2xl font-semibold mb-4">Glosario</h2>
+    <ul class="list-disc ml-6">
+      <li><strong>RAM:</strong> Memoria de acceso aleatorio, rápida y volátil.</li>
+      <li><strong>SSD:</strong> Unidad de estado sólido, almacenamiento persistente rápido.</li>
+      <li><strong>Base de datos:</strong> Sistema para organizar y consultar datos.</li>
+      <li><strong>Cloud:</strong> Infraestructura remota para guardar datos en Internet.</li>
+    </ul>
+  </section>
+
+  <!-- Sección: Quiz -->
+  <section class="p-6">
+    <h2 class="text-2xl font-semibold mb-4">Mini Quiz</h2>
+    <p class="mb-2">¿Cuál de estos es almacenamiento primario?</p>
+    <form class="space-y-2">
+      <label class="block">
+        <input type="radio" name="quiz" value="ram" class="mr-2"> Memoria RAM
+      </label>
+      <label class="block">
+        <input type="radio" name="quiz" value="hdd" class="mr-2"> Disco duro
+      </label>
+      <button type="button" onclick="checkAnswer()" class="mt-3 bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded">Comprobar</button>
+    </form>
+    <p id="quiz-result" class="mt-2 font-bold"></p>
+  </section>
+
+  <footer class="bg-blue-600 text-white text-center p-4 mt-6">
+    © 2025 Sitio educativo - Tipos de Almacenamiento de Datos
+  </footer>
+
+  <script>
+    function checkAnswer() {
+      const selected = document.querySelector('input[name="quiz"]:checked');
+      const result = document.getElementById('quiz-result');
+      if (!selected) {
+        result.textContent = 'Selecciona una respuesta.';
+        result.className = 'text-red-500 font-bold';
+        return;
+      }
+      if (selected.value === 'ram') {
+        result.textContent = '¡Correcto! La RAM es almacenamiento primario.';
+        result.className = 'text-green-500 font-bold';
+      } else {
+        result.textContent = 'No es correcto. Intenta de nuevo.';
+        result.className = 'text-red-500 font-bold';
+      }
+    }
+  </script>
+</body>
+</html>
